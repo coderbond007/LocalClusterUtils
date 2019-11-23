@@ -1,6 +1,7 @@
 package hive.metastore;
 
 import java.util.List;
+import lombok.NonNull;
 import org.apache.hadoop.hive.conf.HiveConf;
 import org.apache.hadoop.hive.metastore.HiveMetaStoreClient;
 import org.apache.hadoop.hive.metastore.IMetaStoreClient;
@@ -26,5 +27,13 @@ public class HiveMetaAccessor {
       hiveMetaStoreClient = new HiveMetaStoreClient(new HiveConf());
       hiveMetaStoreClient = HiveMetaStoreClient.newSynchronizedClient(hiveMetaStoreClient);
     }
+  }
+
+  public static final List<String> getPartitionKeys(@NonNull String database, @NonNull String table)
+      throws TException {
+    if (hiveMetaStoreClient == null) {
+      createClient();
+    }
+    return hiveMetaStoreClient.listPartitionNames(database, table, (short) -1);
   }
 }
