@@ -76,6 +76,7 @@ public class DataShifter {
     structFields[ptr++] = structType.fields()[0];
     structFields = Arrays.copyOf(structFields, ptr);
     StructType structType1 = new StructType(structFields);
-    return structType1;
+    StructType structType2 = structType1;
+    return structType2;
   }
 }
