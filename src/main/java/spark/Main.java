@@ -44,7 +44,6 @@ public class Main {
   private static void doWithOptiPlan(LogicalPlan optimizedPlan) {
     System.out.println(optimizedPlan.treeString());
     System.out.println(DASH_LINE);
-    System.out.println(DASH_LINE);
   }
 
 }
