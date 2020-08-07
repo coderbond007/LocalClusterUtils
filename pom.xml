@@ -13,7 +13,7 @@
   <!--    <lombok.version>1.18.10</lombok.version>-->
   <!--    <spark.sql.version>2.2.0</spark.sql.version>-->
   <!--    <spark.hive.version>2.2.0</spark.hive.version>-->
-  <!--    <mysql.connector.version>5.1.39</mysql.connector.version>-->
+  <!--    <mysql.connector.version>8.0.16</mysql.connector.version>-->
   <!--    <hbase.common.version>2.0.0</hbase.common.version>-->
   <!--    <hbase.client.version>2.0.0</hbase.client.version>-->
   <!--  </properties>-->
